@@ -1,0 +1,164 @@
+> x <- 1
+
+> print(x)
+[1] 1
+> x
+[1] 1
+> x+5
+[1] 6
+> x
+[1] 1
+
+> y <- 1:10
+> y
+ [1]  1  2  3  4  5  6  7  8  9 10
+
+> msg <- c("Hello", "World");
+> msg
+[1] "Hello" "World"
+
+> binary <- c(TRUE, FALSE)
+> binary
+[1]  TRUE FALSE
+> binary <- vector("logical", 2)
+> binary
+[1] FALSE FALSE
+> y <- c(1.7,"a")
+> y
+[1] "1.7" "a"  
+> a <- list(1, "Hello", 3+4i, 2, "Aye!", TRUE, FALSE, 1-2i)
+> a
+[[1]]
+[1] 1
+
+[[2]]
+[1] "Hello"
+
+[[3]]
+[1] 3+4i
+
+[[4]]
+[1] 2
+
+[[5]]
+[1] "Aye!"
+
+[[6]]
+[1] TRUE
+
+[[7]]
+[1] FALSE
+
+[[8]]
+[1] 1-2i
+
+> mat = matrix(nrow=3, ncol=5)
+> mat
+     [,1] [,2] [,3] [,4] [,5]
+[1,]   NA   NA   NA   NA   NA
+[2,]   NA   NA   NA   NA   NA
+[3,]   NA   NA   NA   NA   NA
+> attributes(mat)
+$dim
+[1] 3 5
+
+> dim(mat)
+[1] 3 5
+> mat<-matrix(1:10,nrow=2, ncol=3)
+Warning message:
+In matrix(1:10, nrow = 2, ncol = 3) :
+  data length [10] is not a sub-multiple or multiple of the number of columns [3]
+> mat <- matrix(1:12, nrow=2, ncol=3)
+> mat
+     [,1] [,2] [,3]
+[1,]    1    3    5
+[2,]    2    4    6
+> mat <- matrix(1:3,nrow=2,ncol=3)
+> mat
+     [,1] [,2] [,3]
+[1,]    1    3    2
+[2,]    2    1    3
+> vec <- 1:10
+> dim(vec) <- c(1,5)
+Error in dim(vec) <- c(1, 5) : 
+  dims [product 5] do not match the length of object [10]
+> dim(vec) <- c(3, 5)
+Error in dim(vec) <- c(3, 5) : 
+  dims [product 15] do not match the length of object [10]
+> dim(vec) <- c(2, 5)
+> vec
+     [,1] [,2] [,3] [,4] [,5]
+[1,]    1    3    5    7    9
+[2,]    2    4    6    8   10
+> x <- 1:6
+> y <- 7:10
+> cbind(x, y)
+     x  y
+[1,] 1  7
+[2,] 2  8
+[3,] 3  9
+[4,] 4 10
+[5,] 5  7
+[6,] 6  8
+Warning message:
+In cbind(x, y) :
+  number of rows of result is not a multiple of vector length (arg 2)
+> rbind(y, x)
+  [,1] [,2] [,3] [,4] [,5] [,6]
+y    7    8    9   10    7    8
+x    1    2    3    4    5    6
+Warning message:
+In rbind(y, x) :
+  number of columns of result is not a multiple of vector length (arg 1)
+
+> x <- factor(c("male", "female"))
+> x
+[1] male   female
+Levels: female male
+> table(x)
+x
+female   male 
+     1      1 
+> unclass(x)
+[1] 2 1
+attr(,"levels")
+[1] "female" "male"  
+
+> getwd()
+[1] "D:/MyProjects/MLProjects/RProjects"
+> dir()
+[1] "function1.R"
+> ls()
+[1] "a"      "binary" "mat"    "msg"    "vec"    "x"      "y"     
+
+> x<- c(1,3,5)
+
+> y <- c(3,2,10)
+> cbind(x,y)
+     x  y
+[1,] 1  3
+[2,] 3  2
+[3,] 5 10
+> x <- list(2, "a", "b", TRUE)
+> x[[1]]
+[1] 2
+> x <- 1:4
+> y <- 2
+> x+y
+[1] 3 4 5 6
+> x <- c(17, 14, 4, 5, 13, 12, 10)
+> x[x>10] <- 4
+> x
+[1]  4  4  4  5  4  4 10
+
+> x <- c(17, 14, 4, 5, 13, 12, 10)
+> x[x==4] >10
+[1] FALSE
+> x
+[1] 17 14  4  5 13 12 10
+> x[x>10]==4
+[1] FALSE FALSE FALSE FALSE
+> x[x==10]<-4
+> x
+[1] 17 14  4  5 13 12  4
+>
